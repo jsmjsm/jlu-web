@@ -1,22 +1,22 @@
 /* 标题头部 */
 
-heading {
+
+/* heading {
     color: crimson;
     text-align: center;
     font-family: Courier, serif;
-}
+} */
 
 
 /* 主体  */
 
-.mainBody {
+
+/* .mainBody {
     width: 1000px;
-    /* text-align: center; */
-    /* background-color: aliceblue; */
     margin: auto;
     font-style: normal;
     align-content: center;
-}
+} */
 
 
 /* from MWEB */

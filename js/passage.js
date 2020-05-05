@@ -5876,5 +5876,4 @@ Prism.languages.yaml = {
             }
         }
     }
-}(); <
-/script>
+}();
