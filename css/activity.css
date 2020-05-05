@@ -1,0 +1,23 @@
+/* IDs > Classes > Tags */
+
+
+/*id*/
+
+#news {
+    color: blue;
+}
+
+
+/*class*/
+
+.sports {
+    color: brown;
+    font-size: large;
+}
+
+
+/*tag*/
+
+today {
+    color: yellow;
+}

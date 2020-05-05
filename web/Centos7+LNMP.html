@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>CentOS 7 装 lnmp 配置 Web环境</title>
+    <link rel="stylesheet" href="../css/paper.css">
+    <script src="../js/passage.js"></script>
+    <style>
+        @media print {
+            code[class*="language-"],
+            pre[class*="language-"] {
+                overflow: visible;
+                word-wrap: break-word !important;
+            }
+        }
+    </style>
+</head>
+
+<div class="mainBody">
+    <heading>
+        <h1 style="text-align: center;">My Personal Blog</h1>
+        <h3 style="text-align: center; color: blueviolet;">
+            CentOS 7 装 lnmp 配置 Web环境
+        </h3>
+        <h3 style="text-align: center; color: black;">
+            <span>软件学院 </span> 潘湛艺 <span>20181826</span> </h3>
+    </heading>
+    <a href="../index.html">
+        <div style="text-align: center; margin: 10;"> 回到主页
+        </div>
+    </a>
+</div>
+
+<body>
+    <div id="markdown-body-wrap" class="markdown-body">
+        <h3 id="toc_0">CentOS 7 装 lnmp 配置 Web环境</h1>
+
+            <h3 id="toc_1">1. 安装 screen</h3>
+
+            <pre class="line-numbers"><code class="language-text">yum install screen
+screen -S lnmp
+</code></pre>
+
+            <h3 id="toc_2">2. LNMP 1.6 一键安装脚本</h3>
+
+            <p><a href="https://lnmp.org/install.html">教程</a> </p>
+
+            <pre class="line-numbers"><code class="language-text">wget http://soft.vpser.net/lnmp/lnmp1.6.tar.gz -cO lnmp1.6.tar.gz &amp;&amp; tar zxf lnmp1.6.tar.gz &amp;&amp; cd lnmp1.6 &amp;&amp; ./install.sh lnmp
+</code></pre>
+
+            <h3 id="toc_3">3. 安装 Redis</h3>
+
+            <p><a href="https://lnmp.org/faq/addons.html#redis">教程</a><br /> 进入 <code>lnmp</code> 解压后的目录</p>
+
+            <pre class="line-numbers"><code class="language-text">cd ~ &amp;&amp; ls 
+cd lnmp[版本号]
+</code></pre>
+
+            <p>执行：<code>./addons.sh install redis</code></p>
+
+            <h3 id="toc_4">4. 安装 supervisord</h3>
+
+            <p>先装 ep el拓展</p>
+
+            <pre class="line-numbers"><code class="language-text">yum -y install epel-release
+yum install supervisor
+</code></pre>
+
+            <p>设置开机启动</p>
+
+            <pre class="line-numbers"><code class="language-text">systemctl enable supervisord.service
+</code></pre>
+
+            <h4 id="toc_5">配置文件</h4>
+
+            <p>supervisord 的配置 文件是 /etc/supervisord.conf 自定义配置文件目录是 /etc/supervisord.d ,该目录下文件以 .ini 为后缀。</p>
+
+            <h3 id="toc_6">5. php 模块安装</h3>
+
+            <p>照着这个 <a href="https://www.vpser.net/manage/lnmp-php-install-ext.html">示例</a> 安装 <code>exif</code> 和
+                <code>fileinfo</code> 模块</p>
+
+            <h3 id="toc_7">安装前</h3>
+
+            <ol>
+                <li>看一下，要安装的模块是否已安装 <code>/usr/local/php/bin/php -m</code></li>
+                <li>下载当前PHP版本的源码并解压。LNMP 一件安装脚本会自动删掉解压出来的文件夹，要自己再解压一次。<br /> 源代码目录大概位置：
+                    <code>/root/lnmp1.xxx/src/php-xxxx/</code></li>
+            </ol>
+
+            <h3 id="toc_8">安装思路</h3>
+
+            <p>大部分php扩展/模块的安装就是三个步骤，在源码目录下执行：</p>
+
+            <pre class="line-numbers"><code class="language-text">@ /usr/local/php/bin/phpize
+@ ./configure --with-php-config=/usr/local/php/bin/php-config
+@ make &amp;&amp; make install
+</code></pre>
+
+            <h4 id="toc_9">解压 PHP 源代码</h4>
+
+            <p>解压tar.gz文件 <code>tar -zxvf ×××.tar.gz</code><br /> 解压tar.bz2文件 <code>tar -jxvf ×××.tar.bz2</code></p>
+
+            <h3 id="toc_10">6. 修改 php.ini 配置</h3>
+
+            <p>打开 <code>/usr/local/php/etc/php.ini</code></p>
+
+            <p>去掉 <code>disable_functions</code> 中的 <code>scandir</code>, <code>proc_open</code>,
+                <code>proc_get_status</code>, <code>shell_exec</code></p>
+
+    </div>
+</body>
+
+</html>

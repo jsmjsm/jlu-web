@@ -1,0 +1,64 @@
+/* 标题头部 */
+
+heading {
+    color: crimson;
+    text-align: center;
+    font-family: Courier, serif;
+}
+
+
+/* 主体  */
+
+.mainBody {
+    width: 1000px;
+    /* text-align: center; */
+    /* background-color: aliceblue; */
+    margin: auto;
+    font-style: normal;
+    align-content: center;
+}
+
+#image {
+    width: 200px;
+    height: 150px;
+    /* locate at center */
+    margin: 0 auto;
+}
+
+#imagesGrid {
+    text-align: center;
+    width: 971px;
+    height: 366px;
+    /* locate at center */
+    margin: 0 auto;
+}
+
+table {
+    border: 1px;
+    border-style: solid;
+    width: 240;
+    height: 180;
+}
+
+tr,
+td {
+    border: 1px;
+    border-style: solid;
+    width: 240;
+    height: 180;
+}
+
+#image:hover {
+    /* The cursor should change to a 'hand' when hovered over the images. */
+    cursor: pointer;
+    /* The images should scale to 1.1 times their original size when hovered over 
+    (Hint: Look into the transform CSS property). */
+    transform: scale(1.1);
+    /* Add a shadow to the images when hovered over. */
+    /* box-shadow: 0 10px 50px rgba(51, 51, 51, .25); */
+    -webkit-box-shadow: 0px 5px 5px silver;
+    -moz-box-shadow: 0px 5px 5px silver;
+    box-shadow: 0px 5px 5px silver;
+    /* Make the border of the images rounded on the edges when hovered over. */
+    border-radius: 50px;
+}

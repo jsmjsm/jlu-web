@@ -1,0 +1,67 @@
+/* 标题头部 */
+
+heading {
+    color: crimson;
+    text-align: center;
+    font-family: Courier, serif;
+}
+
+
+/* 主体  */
+
+.mainBody {
+    width: 1000px;
+    /* text-align: center; */
+    /* background-color: aliceblue; */
+    margin: auto;
+    font-style: normal;
+    align-content: center;
+}
+
+
+/*图片 table */
+
+table {
+    /* border: 1px;
+    border-style: solid; */
+    width: 240;
+    height: 180;
+}
+
+tr,
+td {
+    /* border: 1px;
+    border-style: solid; */
+    width: 310;
+    height: 220;
+}
+
+#image {
+    width: 300px;
+    height: 200px;
+    /* locate at center */
+    margin: 0 auto;
+}
+
+#imagesGrid {
+    text-align: center;
+    width: 930px;
+    height: 230px;
+    /* locate at center */
+    margin: 0 auto;
+}
+
+
+/* 引导文字 */
+
+#guideText {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+
+/* #main {
+    font-family: Arial, Helvetica, sans-serif;
+    align-content: center;
+    text-align: center;
+} */
