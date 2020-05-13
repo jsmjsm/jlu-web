@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My Personal Blog</title>
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/style1.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+
+<body>
+    <div class="mainBody">
+        <heading>
+            <h1 style="text-align: center;">My Personal Blog</h1>
+            <h3 style="text-align: center; color: black;">
+                <span>软件学院 </span> 潘湛艺 <span>20181826</span> </h3>
+        </heading>
+        <a href="index.html">
+            <div id="guideText"> 回到主页
+            </div>
+        </a>
+        <table id="imagesGrid">
+            <!--- ROW1 -->
+            <tr>
+                <!-- Row 1 -->
+                <td>
+                    <a href="web/SharePicture.html">
+                        <img id="image" src="images/guideSahrePic.png" alt="Share">
+                        <div id="guideText">图片分享</div>
+                    </a>
+                </td>
+                <td>
+                    <a href="web/Centos7+LNMP.html">
+                        <img id="image" src="images/lnmp.png">
+                        <div id="guideText">CentOS 7 装 lnmp 配置 Web环境</div>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://github.com/jsmjsm/jlu-web">
+                        <img id="image" src="images/github.png">
+                        <div id="guideText">GitHub & 源代码</div>
+                    </a>
+                </td>
+
+            </tr>
+
+        </table>
+    </div>
+    <!-- using the disabled attribute prevents the end user from entering text into the input box -->
+    <input type="text" disabled>
+
+    <!-- The user can enter text into the follow input, as it doesn't contain the disabled attribute -->
+    <input type="text">
+    <footer>
+        <p class="footerText">
+            Created by levypan
+            <br> Copyright © 2020. All Rights Reserved.
+            <p>
+    </footer>
+
+</body>
+
+</html>
