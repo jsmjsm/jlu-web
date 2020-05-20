@@ -19,19 +19,19 @@
         <header>
             <a herf=" ">
                 <!-- TODO: 修改LOGO -->
-                <h4 class="logo">潘湛艺 20281826</h4>
+                <h4 class="logo">WELCOME</h4>
             </a>
             <nav>
                 <ul>
                     <!-- TODO: 修改导航内容 -->
-                    <li><a href="#hero">HOME</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li> <a href="#contact">CONTACT</a></li>
+                    <li><a href="#idhero">HOME</a></li>
+                    <li><a href="#idcategory">CATEGORY</a></li>
+                    <li> <a href="#contact">COMMENT</a></li>
                 </ul>
             </nav>
         </header>
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero" id="idhero">
             <!-- TODO： 修改文字内容 -->
             <h2 class="hero_header">LESS IS <span class="light">MORE</span></h2>
             <p class="tagline">Just make it simple</p>
@@ -59,35 +59,38 @@
             </div>
             <script src="./vue/info.vue"></script>
         </div>
+        <!-- TODO: 页面选择 -->
+        <div class="category" id="idcategory">
+            <div class="guidance">
+                <h2 id="guidance_title">About Me</h2>
+                <img src="./image/about_2.png" alt="img">
+            </div>
+            <div class="guidance">
+                <h2 id="guidance_title">Shopping</h2>
+                <img src="./image/shop_banner2.jpeg" alt="img">
+            </div>
+        </div>
         <!-- Parallax Section -->
         <section class="banner">
             <h2 class="parallax">About This Website</h2>
             <p id="parallax_description">{{ description }}</p>
             <script src="./js/description.js" type="text/JavaScript"></script>
         </section>
-        <!-- More Info Section -->
-        <footer>
-            <article class="footer_column">
-                <h3>ABOUT</h3>
-                <img src="file:///Macintosh HD/Users/levypan/Library/Application Support/Adobe/Dreamweaver 2020/zh_TW/Configuration/Temp/Assets/eam61878bcc.TMP/images/placeholder.jpg" alt="" width="400" height="200" class="cards" />
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla </p>
-            </article>
-            <article class="footer_column">
-                <h3>LOCATION</h3>
-                <img src="file:///Macintosh HD/Users/levypan/Library/Application Support/Adobe/Dreamweaver 2020/zh_TW/Configuration/Temp/Assets/eam61878bcc.TMP/images/placeholder.jpg" alt="" width="400" height="200" class="cards" />
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla </p>
-            </article>
-        </footer>
+
         <!-- Footer Section -->
+        <!-- TODO：留言方式 -->
         <section class="footer_banner" id="contact">
-            <h2 class="hidden">Footer Banner Section </h2>
-            <p class="hero_header">FOR THE LATEST NEWS &amp; UPDATES</p>
-            <div class="button">subscribe</div>
+            <div class="message">
+                <p class="title">Leave Your Comments</p>
+                <input class="comments" type="text" placeholder="请输入你的留言">
+                <input class="email" type="text" placeholder="请输入你的邮箱">
+            </div>
+            <div class="button">submit</div>
         </section>
         <!-- Copyrights Section -->
-        <div class="copyright">&copy;2019- <strong>Light Theme</strong></div>
+        <div class="copyright">&copy;2020 <strong>Googo.cc</strong>
+            <p style="font-size: small;">All Rights Reserve.</p>
+        </div>
     </div>
 </body>
 
